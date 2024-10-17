@@ -2,7 +2,7 @@ name: Golden Tests
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   golden_tests:

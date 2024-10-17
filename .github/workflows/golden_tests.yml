@@ -23,10 +23,16 @@ jobs:
 
         ## start update goldens
 
-      - name: Install Git
-        run: |
-          sudo apt-get update
-          sudo apt-get install git
+      ## start ubuntu
+#      - name: Install Git
+#        run: |
+#          sudo apt-get update
+#          sudo apt-get install git
+      ## end ubuntu
+      ## start macOS
+#      - name: Install Git
+#        run: brew install git
+      ## end macOS
       - name: Configure Git
         run: |
           git config --global user.name "Cristiano Cortez (Esteira)"

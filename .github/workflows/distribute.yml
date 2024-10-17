@@ -1,0 +1,19 @@
+name: Golden Tests
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  golden_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get Flutter
+        uses: actions/setup-flutter@v1
+        with:
+          channel: stable
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Run golden tests
+        run: flutter test --coverage

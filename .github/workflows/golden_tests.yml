@@ -23,20 +23,20 @@ jobs:
 
         ## start update goldens
 
-#      - name: Install Git
-#        run: |
-#          sudo apt-get update
-#          sudo apt-get install git
-#      - name: Configure Git
-#        run: |
-#          git config --global user.name "Cristiano Cortez (Esteira)"
-#          git config --global user.email "cristianocortez@gmail.com"
-#      - name: Update golden tests and commit changes
-#        run: |
-#          flutter test --update-goldens
-#          git add .
-#          git commit -m "Update golden images"
-#          git push origin master
+      - name: Install Git
+        run: |
+          sudo apt-get update
+          sudo apt-get install git
+      - name: Configure Git
+        run: |
+          git config --global user.name "Cristiano Cortez (Esteira)"
+          git config --global user.email "cristianocortez@gmail.com"
+      - name: Update golden tests and commit changes
+        run: |
+          flutter test --update-goldens
+          git add .
+          git commit -m "Update golden images"
+          git push origin master
 
         ## end update goldens
 

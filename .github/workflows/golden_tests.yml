@@ -20,8 +20,12 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-#      - name: Update golden tests
-#        run: flutter test --update-goldens
+      - name: Update golden tests and commit changes
+        run: |
+          flutter test --update-goldens
+          git add .
+          git commit -m "Update golden images"
+          git push origin master
 
       - name: Run golden tests
         run: flutter test --coverage
